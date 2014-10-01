@@ -34,3 +34,15 @@ var findPrice= items.filter(function(i){
 
 });
 console.log(findPrice);
+
+
+//find all items with a currecy of GBP
+var GBP= items.filter(function(j){
+  return j.currency_code==="GBP";
+
+});
+console.log(GBP);
+
+var values= GBP.map.call(GBP, function(v){
+  console.log(v.title + " " + v.price);
+});
