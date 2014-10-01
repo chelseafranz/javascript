@@ -42,5 +42,19 @@ items.forEach(function(w){
     if(q.materials === "wood");
     console.log(w.title);
   })
-
 });
+
+var mat = items.filter(function(m){
+  return m.materials.length > 8;
+});
+console.log(mat);
+
+var howMany = mat.map.call(mat, function(r){
+  console.log(r.title + r.materials);
+});
+
+var whoMade= items.filter(function(w){
+  return w.who_made === 'i_did';
+});
+
+console.log(whoMade.length);
