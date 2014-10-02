@@ -13,12 +13,14 @@ var total= priceArray.reduce(function(a, b){
 
 //divide total of all prices by length of array to find average
 var average= total/priceArray.length;
+  console.log("Question 1")
   console.log ("The average price for an item is " + (average.toFixed(2)));
 
 //filters through all objects in var 'items' and returns all with value between 14&18
 var findPrice= items.filter(function(i){
   return i.price > 14 && i.price < 18;
 });
+console.log("Question 2");
 console.log ("Items that cost between $14 USD and $18 USD: " + (findPrice));
 
 //find all items with a currecy of GBP
@@ -26,7 +28,7 @@ var GBP= items.filter(function(j){
   return j.currency_code==="GBP";
 
 });
-
+console.log("Question 3");
 var values= GBP.map.call(GBP, function(v){
   console.log(v.title + " costs  \u00A3" + v.price);
 });
@@ -42,8 +44,9 @@ items.forEach(function(w){
 var mat = items.filter(function(m){
   return m.materials.length >= 8;
 });
+console.log("Question 4");
 console.log(mat);
-
+console.log("Question 5");
 var howMany = mat.map.call(mat, function(r){
   console.log(r.title + r.materials);
 });
@@ -51,5 +54,6 @@ var howMany = mat.map.call(mat, function(r){
 var whoMade= items.filter(function(w){
   return w.who_made === 'i_did';
 });
+console.log("Question 6");
 //logs the number of objects found in whoMade function
 console.log(whoMade.length) + " were made by their sellers";
